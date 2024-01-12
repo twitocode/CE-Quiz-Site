@@ -1,4 +1,6 @@
-export interface QuestionResult {
-  correct: boolean | undefined;
-  index: number;
+export interface Question {
+  correct?: boolean;
+  type: "code-block" | "text";
+  answer: string;
+  question: string;
 }

@@ -4,7 +4,7 @@
   export let topic: string;
 </script>
 
-<a href="/test" class="w-full flex justify-center">
+<a href="/test/{topic.toLowerCase()}" class="w-full flex justify-center">
   <Button variant="ghost" class="space-x-4">
     <h1>{topic}</h1>  
   </Button>
