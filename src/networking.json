@@ -3,5 +3,21 @@
     "question": "What is a coaxial cable?",
     "answer": "A long distance cable",
     "type": "text"
+  },
+   {
+    "question": "What is a copper straight-through cable?",
+    "answer": "A copper cable",
+    "type": "text"
+  }, 
+  {
+    "question": "What is a network?",
+    "answer": "A group of connected computers",
+    "type": "text"
+  }, 
+  {
+    "question": "What is the internet?",
+    "answer": "An group of interconnected computers",
+    "type": "text"
   }
+
 ]

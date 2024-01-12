@@ -1,3 +1,4 @@
+import { questionsStore } from "../../../lib/store.js";
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
@@ -9,7 +10,22 @@ export async function load({ params }) {
   const topic = params.slug;
   const loadedQuestions = await loadQuestionsAndAnswers(topic);
   
-	return {
-		loadedQuestions
-	};
+  let currentSet = [loadedQuestions[0]];
+
+  while (currentSet.length != 4) {
+    let randomQuestion = loadedQuestions[Math.floor(Math.random() * loadedQuestions.length)];
+    //This makes sure you do not see more than 1 of the answer in the multiple choice
+    if (currentSet.includes(randomQuestion)) continue;
+
+    currentSet.push(randomQuestion);
+  }
+
+  questionsStore.update(x => {
+    return {
+      ...x,
+      loaded: loadedQuestions,
+      currentQuestion: loadedQuestions[0],
+      currentSet: currentSet
+    }
+  })
 }

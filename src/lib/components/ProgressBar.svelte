@@ -1,21 +1,15 @@
 <script lang="ts">
 	import { questionsStore } from "../store";
-	import type { Question } from '../types';
-  import { onDestroy } from 'svelte'
 
-	export let currentQuestion: number;
-	let questions: Question[];
-
-  const unsubscribe = questionsStore.subscribe((value) => questions = value)
-  onDestroy(unsubscribe)
+  $: questionIndex = $questionsStore.loaded.findIndex(x => x == $questionsStore.currentQuestion);
 </script>
 
 <div class="flex w-screen justify-between">
 	<div class="auto-cols-20 grid w-full grid-flow-col gap-4 px-80">
-		{#each questions as item, index}
-			{#if index >= currentQuestion}
+		{#each $questionsStore.loaded as item, index}
+			{#if index >= questionIndex}
 				<div
-					class="{index == currentQuestion &&
+					class="{index == questionIndex &&
 						'animate-pulse'} h-2 w-full rounded-lg bg-gray-500 dark:bg-white"
 				></div>
 			{:else}
