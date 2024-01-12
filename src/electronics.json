@@ -1,3 +1,22 @@
-{
-  
-}
+[
+	{
+		"question": "What does this code do",
+		"answer": "eats food",
+		"type": "code"
+	},
+	{
+		"question": "What does pinMode() do?",
+		"answer": "library lasss",
+		"type": "text"
+	},
+	{
+		"question": "What does a wire do?",
+		"answer": "transfer electricity",
+		"type": "text"
+	},
+	{
+		"question": "WHy should we charge batteries",
+		"answer": "so that computers dont explode",
+		"type": "text"
+	}
+]

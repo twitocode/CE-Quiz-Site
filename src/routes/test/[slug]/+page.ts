@@ -1,19 +1,25 @@
-import { questionsStore } from "../../../lib/store.js";
+// import { error } from "@sveltejs/kit";
+import { questionsStore } from "$lib/store.js";
+import type { Question } from "$lib/types.js";
+
+async function loadQuestionsAndAnswers(file: string) {
+  const loadedQuestions = await import(`../../../${file}.json`);
+  return loadedQuestions.default;
+}
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
-  async function loadQuestionsAndAnswers(file: string) {
-    const loadedQuestions = await import(`../../../${file}.json`);
-    return loadedQuestions.default;
-  }
-
   const topic = params.slug;
   const loadedQuestions = await loadQuestionsAndAnswers(topic);
-  
-  let currentSet = [loadedQuestions[0]];
+
+  // if (!loadedQuestions) {
+  //   error(404, 'not found');
+  // }
+
+  const currentSet: Question[] = [];
 
   while (currentSet.length != 4) {
-    let randomQuestion = loadedQuestions[Math.floor(Math.random() * loadedQuestions.length)];
+    const randomQuestion = loadedQuestions[Math.floor(Math.random() * loadedQuestions.length)];
     //This makes sure you do not see more than 1 of the answer in the multiple choice
     if (currentSet.includes(randomQuestion)) continue;
 

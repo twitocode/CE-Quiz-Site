@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex w-screen justify-between">
-	<div class="auto-cols-20 grid w-full grid-flow-col gap-4 px-80">
+	<div class="auto-cols-20 grid w-full grid-flow-col gap-4 px-10 md:px-40 lg:px-80">
 		{#each $questionsStore.loaded as item, index}
 			{#if index >= questionIndex}
 				<div

@@ -1,23 +1,197 @@
 [
-  {
-    "question": "What is a coaxial cable?",
-    "answer": "A long distance cable",
-    "type": "text"
-  },
-   {
-    "question": "What is a copper straight-through cable?",
-    "answer": "A copper cable",
-    "type": "text"
-  }, 
-  {
-    "question": "What is a network?",
-    "answer": "A group of connected computers",
-    "type": "text"
-  }, 
-  {
-    "question": "What is the internet?",
-    "answer": "An group of interconnected computers",
-    "type": "text"
-  }
-
+	{
+		"question": "What is the internet?",
+		"answer": "A worldwide network of networks",
+		"type": "text"
+	},
+	{
+		"question": "What is a network?",
+		"answer": "A group of interconnected computers",
+		"type": "text"
+	},
+	{
+		"question": "What is a SOHO Network?",
+		"answer": "Allows computers in a home office or a remote office to connect to a corporate network, or access centralized, shared resources",
+		"type": "text"
+	},
+	{
+		"question": "What is a Small Home Network?",
+		"answer": "Connects a few computers to each other and to the internet.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Medium to Large Networks?",
+		"answer": "Can have many locations with hundreds or thousands of interconnected hosts",
+		"type": "text"
+	},
+	{
+		"question": "What is the World Wide Network",
+		"answer": "A network of networks that connects hundreds of millions of computers world-wide.",
+		"type": "text"
+	},
+	{
+		"question": "What is an RFID Tag?",
+		"answer": "Can be placed in or on objects to track them or monitor sensors for many conditions.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Volunteered Data",
+		"answer": "Created and explicitly shared by individuals, such as social network profiles. Might include video files, pictures, text or audio files",
+		"type": "text"
+	},
+	{
+		"question": "What is Observed Data?",
+		"answer": "Captured by recording the actions of individuals, such as location data when using cell phones.",
+		"type": "text"
+	},
+	{
+		"question": "What is Inferred Data?",
+		"answer": "Things such as a credit score, which is based on analysis of volunteered or observed data.",
+		"type": "text"
+	},
+	{
+		"question": "What is Observed Data?",
+		"answer": "Captured by recording the actions of individuals, such as location data when using cell phones.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Bit?",
+		"answer": "A basic unit of information that represents one of two discrete states is known",
+		"type": "text"
+	},
+	{
+		"question": "What are Electrical Signals?",
+		"answer": "Transmission is achieved by representing data as electrical pulses on copper wire.",
+		"type": "text"
+	},
+	{
+		"question": "What are Optical signals?",
+		"answer": "Transmission is achieved by converting the electrical signals into light pulses.",
+		"type": "text"
+	},
+	{
+		"question": "What are Wireless signals?",
+		"answer": "Transmission is achieved by using infrared, microwave, or radio waves through the air.",
+		"type": "text"
+	},
+	{
+		"question": "What is Bandwidth?",
+		"answer": "The capacity of a medium to carry data",
+		"type": "text"
+	},
+	{
+		"question": "What is Throughput?",
+		"answer": "The amount of data going through a medium, affected by many factors",
+		"type": "text"
+	},
+	{
+		"question": "What is a Server?",
+		"answer": "Hosts that have software installed which enable them to provide information",
+		"type": "text"
+	},
+	{
+		"question": "What is a Host?",
+		"answer": "Any computer that is connected to a network that participates directly in network communication",
+		"type": "text"
+	},
+	{
+		"question": "What is a Client?",
+		"answer": "A host that has software installed that enables it to request and display information obtained from the Server.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Peer-to-Peer Network?",
+		"answer": "Allows many computers in a network to run both client and server software.",
+		"type": "text"
+	},
+	{
+		"question": "What are End Devices?",
+		"answer": "Interface users and the underlying communication network.",
+		"type": "text"
+	},
+	{
+		"question": "What are Network Media?",
+		"answer": "The communication channels used to interconnect nodes on a network",
+		"type": "text"
+	},
+	{
+		"question": "What is a Network Interface Card (NIC)",
+		"answer": "A piece of hardware that enables the device to connect to the network medium, either wired or wireless",
+		"type": "text"
+	},
+	{
+		"question": "What is an IP Address?",
+		"answer": "Identifies the host on the network",
+		"type": "text"
+	},
+	{
+		"question": "What is a Subnet Mask?",
+		"answer": "Identifies the network on which the host is connected to.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Default Gateway?",
+		"answer": "Identifies the networking device that the host uses to access the internet or another remote network (Usually the router)",
+		"type": "text"
+	},
+	{
+		"question": "What is a MAC address?",
+		"answer": "A unique identifier assigned to your NIC.",
+		"type": "text"
+	},
+	{
+		"question": "What can be inputted in the ping command?",
+		"answer": "IP Addresses and Domain Names",
+		"type": "text"
+	},
+	{
+		"question": "What does pinging your IP Address do?",
+		"answer": "Lets you know if your NIC is working or not",
+		"type": "text"
+	},
+	{
+		"question": "What does NFC use to transmit data?",
+		"answer": "Electromagnetic fields",
+		"type": "text"
+	},
+	{
+		"question": "What is an Intermediary Device?",
+		"answer": "Devices that connect other devices, mainly hosts. Move and control network traffic.",
+		"type": "text"
+	},
+	{
+		"question": "What is a DNS Server?",
+		"answer": "A server that translates a domain name to its IP address.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Static Address?",
+		"answer": "An IP Address entered in by a network administrator",
+		"type": "text"
+	},
+	{
+		"question": "What is a Logical Topology?",
+		"answer": "A diagram that shows how data flows and is transmitted in a network.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Physical Topology?",
+		"answer": "A diagram that records where each host is located and how it is connected to the network.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Coaxial Cable?",
+		"answer": "A copper cable used for long distance communication via radio signals. Carries high frequency signals with little loss. Connects a server to the internet.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Copper Crossover Cable?",
+		"answer": "A cable used for connecting 2 devices of the same type for communication",
+		"type": "text"
+	},
+	{
+		"question": "What is a Copper Straight-Through Cable?",
+		"answer": "A cable used for connecting 2 devices of different types for communication",
+		"type": "text"
+	}
 ]

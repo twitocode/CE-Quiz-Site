@@ -5,6 +5,9 @@
 
 </script>
 
-<Navbar />
+
+<div class="w-screen overflow-x-hidden">
+  <Navbar />
 <ModeWatcher />
-<slot />
+  <slot />
+</div>

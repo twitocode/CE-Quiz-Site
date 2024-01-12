@@ -1,5 +1,8 @@
 <script>
 	import TopicChoice from '../lib/components/TopicChoice.svelte';
+	import { questionsStore, reset } from "../lib/store";
+
+  reset();
 </script>
 
 <main class="flex w-screen flex-col items-center space-y-10">
