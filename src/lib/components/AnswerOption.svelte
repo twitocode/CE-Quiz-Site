@@ -8,10 +8,10 @@
 	const answerQuestionDispatch = createEventDispatcher();
 
 	let baseStyle =
-		'inline-flex items-center rounded-md text-sm font-medium whitespace-nowrap ring-offset-background h-10 px-4 py-2 w-full ';
+		'text-wrap inline-flex items-center rounded-md text-sm font-medium whitespace-nowrap ring-offset-background h-fit px-4 py-2 w-full ';
 
 	let normalStyle =
-		'inline-flex items-center rounded-md text-sm font-medium whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground';
+		'transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground';
 
 	function onClick() {
 		answerQuestionDispatch('lock', {

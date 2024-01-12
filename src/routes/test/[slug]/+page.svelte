@@ -33,7 +33,9 @@
 </script>
 
 <main class="flex w-screen flex-col items-center">
-	<ProgressBar />
+	{#if $questionsStore.loaded.length <= 20}
+    <ProgressBar />
+  {/if}
 	<h3 class="mt-10 md:mt-20">Question {questionIndex + 1}/{$questionsStore.loaded.length}</h3>
 	<div class="mt-10 flex w-10/12 flex-col items-center lg:w-1/2">
 		<h1 class="mb-10 scroll-m-20 text-center text-4xl font-medium tracking-tight lg:text-3xl">
@@ -44,7 +46,7 @@
 				<AnswerOption bind:question {locked} on:lock={getResults} />
 			{/each}
 			{#if locked}
-				<div class="flex justify-center">
+				<div class="flex justify-center flex-col items-center">
 					<Button on:click={onNextQuestion}
 						>Next Question
 						<ChevronRight className="h-4 w-4" />

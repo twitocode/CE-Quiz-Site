@@ -1,6 +1,7 @@
 // import { error } from "@sveltejs/kit";
 import { questionsStore } from "$lib/store.js";
 import type { Question } from "$lib/types.js";
+import { shuffleArray } from "../../../lib/utils.js";
 
 async function loadQuestionsAndAnswers(file: string) {
   const loadedQuestions = await import(`../../../${file}.json`);
@@ -16,7 +17,7 @@ export async function load({ params }) {
   //   error(404, 'not found');
   // }
 
-  const currentSet: Question[] = [];
+  let currentSet: Question[] = [loadedQuestions[0]];
 
   while (currentSet.length != 4) {
     const randomQuestion = loadedQuestions[Math.floor(Math.random() * loadedQuestions.length)];
@@ -25,6 +26,8 @@ export async function load({ params }) {
 
     currentSet.push(randomQuestion);
   }
+
+  currentSet = shuffleArray(currentSet);
 
   questionsStore.update(x => {
     return {

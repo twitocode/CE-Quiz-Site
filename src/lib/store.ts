@@ -1,5 +1,6 @@
 import { get, writable } from 'svelte/store';
 import type { Question } from './types';
+import { shuffleArray } from "./utils";
 
 export interface QuestionsStore {
 	loaded: Question[];
@@ -15,13 +16,6 @@ export const questionsStore = writable<QuestionsStore>({
 
 export function reset() {
 	questionsStore.set({ currentSet: [], loaded: [], currentQuestion: undefined });
-}
-
-function shuffle<T>(array: T[]) {
-	return array
-		.map((value) => ({ value, sort: Math.random() }))
-		.sort((a, b) => a.sort - b.sort)
-		.map(({ value }) => value);
 }
 
 export function newQuestion(): boolean {
@@ -45,7 +39,7 @@ export function newQuestion(): boolean {
 	}
 
 	const newQuestion = loaded[currentIndex + 1];
-	currentSet = shuffle(currentSet);
+	currentSet = shuffleArray(currentSet);
 	questionsStore.update((x) => ({ ...x, currentSet, currentQuestion: newQuestion }));
 	return false;
 }
