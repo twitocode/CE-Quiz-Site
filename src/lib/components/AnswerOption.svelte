@@ -8,14 +8,15 @@
 	const answerQuestionDispatch = createEventDispatcher();
 
 	let baseStyle =
-		'h-20 text-pretty inline-flex items-center rounded-md text-sm font-medium  ring-offset-background px-4 py-2 w-full ';
+		'md:text-lg lg:text-xl h-20 text-pretty inline-flex items-center rounded-md text-sm font-medium  ring-offset-background px-4 py-2 w-full ';
 
 	let normalStyle =
 		'transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground';
 
 	function onClick() {
 		answerQuestionDispatch('lock', {
-			correct: $questionsStore.currentQuestion == question
+			correct: $questionsStore.currentQuestion == question,
+      incorrectAnswer: $questionsStore.currentQuestion == question ? undefined : question.answer
 		});
 	}
 </script>
