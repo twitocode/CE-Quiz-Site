@@ -50,11 +50,6 @@
 		"type": "text"
 	},
 	{
-		"question": "What is Observed Data?",
-		"answer": "Captured by recording the actions of individuals, such as location data when using cell phones.",
-		"type": "text"
-	},
-	{
 		"question": "What is a Bit?",
 		"answer": "A basic unit of information that represents one of two discrete states is known",
 		"type": "text"

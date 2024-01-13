@@ -5,12 +5,12 @@
   export let incorrect: boolean | undefined;
 
 	let baseStyle =
-		'md:text-lg lg:text-xl h-20 text-pretty inline-flex items-center rounded-md text-sm font-medium  ring-offset-background px-4 py-2 w-full ';
+		'md:text-lg  h-fit text-pretty inline-flex items-center rounded-md text-sm font-medium ring-offset-background w-full  ';
 
   //VERY UGLY TERNARY
   const color = question.correct
-    ? 'bg-green-500'
-    : incorrect ? "bg-gray-500" : 'bg-red-500';
+    ? 'text-green-500'
+    : !incorrect ? "text-gray-500" : 'text-red-500';
 
 </script>
 <div
