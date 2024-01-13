@@ -1,6 +1,7 @@
 import { get, writable } from 'svelte/store';
 import type { Question } from './types';
 import { shuffleArray } from "./utils";
+import { browser } from "$app/environment";
 
 export interface QuestionsStore {
 	loaded: Question[];
@@ -27,6 +28,9 @@ export function newQuestion(): boolean {
 	let currentSet: Question[] = [loaded[currentIndex + 1]];
 
 	if (currentIndex == -1 || currentIndex + 1 >= loaded.length) {
+    if (browser) {
+      localStorage.setItem("save-data", JSON.stringify(loaded));
+    }
 		return true;
 	}
 
@@ -41,5 +45,6 @@ export function newQuestion(): boolean {
 	const newQuestion = loaded[currentIndex + 1];
 	currentSet = shuffleArray(currentSet);
 	questionsStore.update((x) => ({ ...x, currentSet, currentQuestion: newQuestion }));
-	return false;
+	
+  return false;
 }

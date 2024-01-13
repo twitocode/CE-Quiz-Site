@@ -8,7 +8,7 @@
 	const answerQuestionDispatch = createEventDispatcher();
 
 	let baseStyle =
-		'text-wrap inline-flex items-center rounded-md text-sm font-medium whitespace-nowrap ring-offset-background h-fit px-4 py-2 w-full ';
+		'h-20 text-pretty inline-flex items-center rounded-md text-sm font-medium  ring-offset-background px-4 py-2 w-full ';
 
 	let normalStyle =
 		'transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground';
@@ -22,17 +22,16 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div on:click={onClick}>
-	{#if locked}
-		<div
-			class="{baseStyle} flex items-center space-x-4 text-white {$questionsStore.currentQuestion ==
-			question
-				? 'bg-green-500'
-				: 'bg-red-500'}"
-		>
-			{question.answer}
-		</div>
-	{:else}
-		<div class={baseStyle + normalStyle}>{question.answer}</div>
-	{/if}
-</div>
+{#if locked}
+  <div
+    on:click={onClick}
+    class="{baseStyle} flex items-center space-x-4 text-white {$questionsStore.currentQuestion ==
+    question
+      ? 'bg-green-500'
+      : 'bg-red-500'}"
+  >
+    {question.answer}
+  </div>
+{:else}
+  <div on:click={onClick} class={baseStyle + normalStyle}>{question.answer}</div>
+{/if}

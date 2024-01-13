@@ -16,10 +16,7 @@
 
 	function getResults({ detail }: any) {
 		locked = true;
-
-		if (detail.correct) {
-			$questionsStore.currentQuestion!.correct = true;
-		}
+		$questionsStore.currentQuestion!.correct = detail.correct;
 	}
 
 	function onNextQuestion() {
@@ -37,11 +34,11 @@
     <ProgressBar />
   {/if}
 	<h3 class="mt-10 md:mt-20">Question {questionIndex + 1}/{$questionsStore.loaded.length}</h3>
-	<div class="mt-10 flex w-10/12 flex-col items-center lg:w-1/2">
-		<h1 class="mb-10 scroll-m-20 text-center text-4xl font-medium tracking-tight lg:text-3xl">
+	<div class="lg:mt-10 flex w-10/12 flex-col items-center lg:w-1/2">
+		<h1 class="w-full mb-4 md:mb-10 scroll-m-20 text-center tmd:ext-4xl font-bold tracking-tight text-2xl lg:text-3xl">
 			{$questionsStore.currentQuestion?.question}
 		</h1>
-		<div class="w-full space-y-10">
+		<div class="w-full space-y-4 md:space-y-10">
 			{#each $questionsStore.currentSet as question}
 				<AnswerOption bind:question {locked} on:lock={getResults} />
 			{/each}
