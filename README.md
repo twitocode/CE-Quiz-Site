@@ -1,6 +1,6 @@
 # Computer Engineering Quizzing
 
-[Website](https://ce-quizzing.vercel.app/)
+[Website](https://cequiz.vercel.app/)
 
 This is a website that encourages students to practice their knowledge of computer engineering topics
 This is an assignment for school
