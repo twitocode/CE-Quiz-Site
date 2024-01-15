@@ -5,6 +5,9 @@
   reset();
 </script>
 
+<svelte:head>
+  <title>Comp Eng Quiz</title>
+</svelte:head>
 <main class="flex w-screen flex-col items-center space-y-0">
 	<h1 class="font-medium mt-20 mb-10 lg:mt-0">Choose a topic to study</h1>
 	<div class="max-w-screen-sm space-y-4 flex flex-col items-center">

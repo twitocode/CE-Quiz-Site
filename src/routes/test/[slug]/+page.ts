@@ -10,7 +10,7 @@ async function loadQuestionsAndAnswers(file: string): Promise<Question[]> {
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
-  const topic = params.slug;
+  const topic = params.slug.toLowerCase();
   const loadedQuestions = shuffleArray(await loadQuestionsAndAnswers(topic));
 
   const firstQuestion = loadedQuestions[0];
@@ -35,4 +35,8 @@ export async function load({ params }) {
 			currentSet: currentSet
 		};
   })
+
+  return {
+    slug: params.slug
+  }
 }

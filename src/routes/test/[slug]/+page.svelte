@@ -7,6 +7,8 @@
 	import Button from '../../../lib/components/ui/button/button.svelte';
 	import { newQuestion, questionsStore, reset } from '../../../lib/store';
 
+  export let data:{slug: string};
+
 	$: questionIndex = $questionsStore.loaded.findIndex((x) => x == $questionsStore.currentQuestion);
 	$: locked = false;
 
@@ -33,6 +35,9 @@
 	}
 </script>
 
+<svelte:head>
+  <title>{data.slug} Test</title>
+</svelte:head>
 <main class="flex w-screen flex-col items-center">
 	<div class="hidden lg:block">
 		<ProgressBar />

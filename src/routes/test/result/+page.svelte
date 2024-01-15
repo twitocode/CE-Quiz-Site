@@ -115,3 +115,6 @@
       <Button class="w-full">Choose a new quiz</Button>
     </a>
 </main>
+<svelte:head>
+  <title>Test Results</title>
+</svelte:head>
