@@ -3,7 +3,7 @@ import { questionsStore } from "$lib/store.js";
 import type { Question } from "$lib/types.js";
 import { shuffleArray } from "../../../lib/utils.js";
 
-async function loadQuestionsAndAnswers(file: string) {
+async function loadQuestionsAndAnswers(file: string): Promise<Question[]> {
   const loadedQuestions = await import(`../../../${file}.json`);
   return loadedQuestions.default;
 }
@@ -11,7 +11,7 @@ async function loadQuestionsAndAnswers(file: string) {
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
   const topic = params.slug;
-  const loadedQuestions = await loadQuestionsAndAnswers(topic);
+  const loadedQuestions = shuffleArray(await loadQuestionsAndAnswers(topic));
 
   // if (!loadedQuestions) {
   //   error(404, 'not found');

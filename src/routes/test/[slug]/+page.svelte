@@ -34,11 +34,11 @@
 </script>
 
 <main class="flex w-screen flex-col items-center">
-	{#if $questionsStore.loaded.length <= 20}
+	<div class="hidden lg:block">
 		<ProgressBar />
-	{/if}
-	<h3 class="mt-10 md:mt-20">Question {questionIndex + 1}/{$questionsStore.loaded.length}</h3>
-	<div class="flexflex-col w-10/12 items-center lg:mt-10 lg:w-1/2">
+	</div>
+	<h3 class="mt-10">Question {questionIndex + 1}/{$questionsStore.loaded.length}</h3>
+	<div class="flexflex-col w-10/12 items-center lg:mt-10 lg:w-1/2 mb-20">
 		<h1
 			class="mb-4 w-full scroll-m-20 text-center text-2xl font-bold tracking-tight md:mb-10 md:text-4xl lg:text-3xl"
 		>

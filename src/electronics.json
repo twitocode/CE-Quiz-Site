@@ -1,22 +1,92 @@
 [
 	{
-		"question": "What does this code do",
-		"answer": "eats food",
-		"type": "code"
-	},
-	{
-		"question": "What does pinMode() do?",
-		"answer": "library lasss",
+		"question": "What is a circuit?",
+		"answer": "A path across which electricity can pass, The path must be continuous from the source of power to the ground",
 		"type": "text"
 	},
 	{
-		"question": "What does a wire do?",
-		"answer": "transfer electricity",
+		"question": "What is a Series Circuit?",
+		"answer": "A circuit where all components are connected in a straight path",
 		"type": "text"
 	},
 	{
-		"question": "Why should we charge batteries",
-		"answer": "so that computers dont explode",
+		"question": "What is a Parallel Circuit?",
+		"answer": "A circuit where some components are connected to branching paths.",
+		"type": "text"
+	},
+	{
+		"question": "What is a Power Source?",
+		"answer": "Any source of electricity",
+		"type": "text"
+	},
+	{
+		"question": "What is a Switch?",
+		"answer": "Allow the electrical circuit to be temporarily broken",
+		"type": "text"
+	},
+	{
+		"question": "What is a Light?",
+		"answer": "Bi-directional components that, when provided with electricity, produce light",
+		"type": "text"
+	},
+	{
+		"question": "What is an LED?",
+		"answer": "A semiconductor device that emits light when current flows through it",
+		"type": "text"
+	},
+	{
+		"question": "What is Ground on a circuit?",
+		"answer": "Used to define the exit point for electrons",
+		"type": "text"
+	},
+	{
+		"question": "What is a Resistor?",
+		"answer": "Used to limit the flow of current, adjust signal levels, divide voltages and other things",
+		"type": "text"
+	},
+	{
+		"question": "What is a Transistor?",
+		"answer": "Small switches that are made with semiconductor material. They are the most important component in modern electronics",
+		"type": "text"
+	},
+	{
+		"question": "What is Soldering",
+		"answer": "The process of joining electrical components together by melting solder to make an electrical connection",
+		"type": "text"
+	},
+	{
+		"question": "What is a Solder",
+		"answer": "An alloy of different metal elements chosen for their conductivity and low melting temperature properties",
+		"type": "text"
+	},
+	{
+		"question": "What is an Oxide?",
+		"answer": "A metal that has been reacted with oxygen",
+		"type": "text"
+	},
+	{
+		"question": "What is Arduino?",
+		"answer": "An open source physical computing platform based on a simple input/output board",
+		"type": "text"
+	},
+	{
+		"question": "What is the main language used in Arduino?",
+		"answer": "C++",
+		"type": "text"
+	},
+	{
+		"question": "What is a Potentiometer?",
+		"answer": "A 3 terminal variable resistor in which the resistance is manually varied to control the flow of electric current",
+		"type": "text"
+	},
+	{
+		"question": "What is a Push-Button?",
+		"answer": "An electrical switch activated by pressing a button",
+		"type": "text"
+	},
+	{
+		"question": "What is a Photoresistor",
+		"answer": "A passive component that decreases resistance with respect to receiving luminosity on the component's sensitive surface",
 		"type": "text"
 	}
 ]

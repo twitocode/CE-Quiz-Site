@@ -1,0 +1,22 @@
+[
+	{
+		"question": "Which of these is a proper use of pinMode()",
+		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT)",
+		"type": "code-block"
+	},
+	{
+		"question": "Which of these is a proper use of pinMode()",
+		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT)",
+		"type": "code-block"
+	},
+	{
+		"question": "Which of these is a proper use of pinMode()",
+		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT)",
+		"type": "code-block"
+	},
+	{
+		"question": "Which of these is a proper use of pinMode()",
+		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT)",
+		"type": "code-block"
+	}
+]

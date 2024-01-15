@@ -99,7 +99,7 @@
                 <AnswerResult {question} incorrect />
               </div>
               <div class="flex h-full flex-col justify-center">
-                <span class="text-md font-medium md:mt-0 md:text-2xl">Correct Answer</span>
+                <span class="text-md font-medium mt-2 md:mt-0 md:text-2xl">Correct Answer</span>
                 <AnswerResult {question} incorrect={false} />
               </div>
             </div>

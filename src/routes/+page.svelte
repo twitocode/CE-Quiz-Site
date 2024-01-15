@@ -1,6 +1,6 @@
 <script>
 	import TopicChoice from '../lib/components/TopicChoice.svelte';
-	import { questionsStore, reset } from "../lib/store";
+	import { reset } from "../lib/store";
 
   reset();
 </script>
@@ -10,5 +10,6 @@
 	<div class="max-w-screen-sm space-y-4 flex flex-col items-center">
 		<TopicChoice topic="Networking" />
     <TopicChoice topic="Electronics" />
+    <TopicChoice topic="Coding" />
 	</div>
 </main>
