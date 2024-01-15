@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import AnswerResult from '../../../lib/components/AnswerResult.svelte';
 	import type { Question } from '../../../lib/types.js';
+	import Button from "../../../lib/components/ui/button/button.svelte";
 
 	type QuestionData = { value: number; group: 'Correct' | 'Incorrect' };
 
@@ -66,6 +67,9 @@
         }
       }}
     />
+    <a href="/" class="w-10/12 mt-10 md:w-fit">
+      <Button class="w-full">Choose a new quiz</Button>
+    </a>
     {/if}
     {#if chartData.length != 0 && chartData[0].value > 0}
       <h1
@@ -107,4 +111,7 @@
         {/each}
       </div>
     {/if}
+    <a href="/" class="w-10/12 mt-10 md:w-fit">
+      <Button class="w-full">Choose a new quiz</Button>
+    </a>
 </main>

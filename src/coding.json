@@ -1,22 +1,82 @@
 [
 	{
 		"question": "Which of these is a proper use of pinMode()",
-		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT)",
-		"type": "code-block"
+		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT);",
+		"type": "code"
 	},
 	{
-		"question": "Which of these is a proper use of pinMode()",
-		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT)",
-		"type": "code-block"
+		"question": "Which of these represents an if statement",
+		"answer": "if (name == \"Mr. P\") {\n  Serial.println(\"I am the teacher\");\n}",
+		"type": "code"
 	},
 	{
-		"question": "Which of these is a proper use of pinMode()",
-		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT)",
-		"type": "code-block"
+		"question": "Which of these is a comment?",
+		"answer": "//if (name == \"Mr. P\") {\n//  Serial.println(\"//I am the teacher\");\n//}",
+		"type": "code"
 	},
 	{
-		"question": "Which of these is a proper use of pinMode()",
-		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT)",
-		"type": "code-block"
-	}
+		"question": "What does analogRead() do?",
+		"answer": "Reads the value from the specified analog pin",
+		"type": "text"
+	},
+	{
+		"question": "What does digitalRead() do?",
+		"answer": "Reads the value from a specified digital pin, either HIGH or LOW.",
+		"type": "text"
+	},
+	{
+		"question": "What does analogWrite() do?",
+		"answer": "Writes an analog value (PWM wave) to a pin",
+		"type": "text"
+	},
+	{
+		"question": "What does digitalWrite() do?",
+		"answer": "Write a HIGH or a LOW value to a digital pin.",
+		"type": "text"
+	},
+	{
+		"question": "Which is a proper use of delay()",
+		"answer": "void loop() {\n  int milliseconds = 5000;\n  delay(milliseconds);\n}",
+		"type": "code"
+	},
+	{
+		"question": "What does tone() do?",
+		"answer": "Generates a square wave of the specified frequency (and 50% duty cycle) on a pin",
+		"type": "text"
+	},
+	{
+		"question": "What does millis() do?",
+		"answer": "Returns the number of milliseconds passed since the Arduino board began running the current program",
+		"type": "text"
+	},
+	{
+		"question": "What is the void keyword?",
+		"answer": "It indicates that the function is expected to return no information to the function from which it was called.",
+		"type": "text"
+	},
+	{
+		"question": "What is the int keyword?",
+		"answer": "The primary data-type for number storage.",
+		"type": "text"
+	},
+	{
+		"question": "What is the float keyword?",
+		"answer": "The datatype for floating-point numbers, a number that has a decimal point",
+		"type": "text"
+	},
+	{
+		"question": "What is the bool keyword?",
+		"answer": "Holds one of two values, true or false",
+		"type": "text"
+	},
+	{
+		"question": "Which is a proper use of setup()",
+		"answer": "void setup() {\n  Serial.begin(9600);\n}",
+		"type": "code"
+	},
+  {
+    "question": "Which is NOT a proper loop() function?",
+    "answer": "loop {\n  delay(5000);\n}",
+    "type": "code"
+  }
 ]
