@@ -4,7 +4,7 @@
 	import Navbar from '../lib/components/Navbar.svelte';
 </script>
 
-<div class="w-screen overflow-x-hidden h-screen">
+<div class="h-screen w-screen overflow-x-hidden">
 	<Navbar />
 	<ModeWatcher />
 	<slot />
