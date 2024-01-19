@@ -68,7 +68,7 @@
       }}
     />
     <a href="/" class="w-10/12 mt-10 md:w-fit">
-      <Button class="w-full">Choose a new quiz</Button>
+      <Button class="w-full md:w-80">Choose a new quiz</Button>
     </a>
     {/if}
     {#if chartData.length != 0 && chartData[0].value > 0}
@@ -90,7 +90,7 @@
     {/if}
     {#if chartData.length != 0 && chartData[1].value > 0}
       <h1
-        class="tmd:ext-4xl my-10 mb-4 w-full scroll-m-20 text-center text-2xl font-bold tracking-tight md:mb-10 lg:text-3xl"
+        class="md:text-4xl my-10 mb-4 w-full scroll-m-20 text-center text-2xl font-bold tracking-tight md:mb-10 lg:text-3xl"
       >
         What did you get wrong?
       </h1>
@@ -112,7 +112,7 @@
       </div>
     {/if}
     <a href="/" class="w-10/12 mt-10 md:w-fit">
-      <Button class="w-full">Choose a new quiz</Button>
+      <Button class="w-full md:w-80">Choose a new quiz</Button>
     </a>
 </main>
 <svelte:head>

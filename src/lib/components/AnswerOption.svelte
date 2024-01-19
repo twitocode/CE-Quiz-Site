@@ -8,7 +8,7 @@
 	const answerQuestionDispatch = createEventDispatcher();
 
 	let baseStyle =
-		'shadow-xl md:text-lg lg:text-xl h-20 text-pretty inline-flex items-center rounded-md text-sm font-medium  ring-offset-background px-4 py-2 w-full ';
+		'shadow-xl md:text-lg lg:text-xl min-h-16 md:min-h-40 text-pretty inline-flex items-center rounded-md text-sm font-medium  ring-offset-background px-4 py-2 w-full ';
 
 	let normalStyle =
 		'transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground';
@@ -28,7 +28,7 @@
 {#if locked}
 	{#if question.type == 'code'}
 		<div
-			class="mockup-code bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 {$questionsStore.currentQuestion ==
+			class="mockup-code text-sm py-3 bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 {$questionsStore.currentQuestion ==
 			question
 				? 'ring-green-500'
 				: 'ring-red-500'}"
@@ -50,7 +50,7 @@
 {:else if question.type == 'code'}
 	<div
 		on:click={onClick}
-		class="mockup-code bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:ring-0"
+		class="mockup-code text-sm py-3 bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:ring-0"
 	>
 		{#each blocks as block, i}
 			<pre data-prefix={(i + 1).toString()}><code>{block}</code></pre>

@@ -49,18 +49,19 @@
 		>
 			{$questionsStore.currentQuestion?.question}
 		</h1>
-		<div class="w-full space-y-4 md:space-y-10">
+		<!-- <div class="w-full space-y-4 md:space-y-10 "> -->
+		<div class="w-full gap-8 space-y-4 md:grid md:grid-cols-2 md:space-y-0">
 			{#each $questionsStore.currentSet as question}
 				<AnswerOption bind:question {locked} on:lock={getResults} />
 			{/each}
-			{#if locked}
-				<div class="flex flex-col items-center justify-center">
-					<Button on:click={onNextQuestion}
-						>Next Question
-						<ChevronRight className="h-4 w-4" />
-					</Button>
-				</div>
-			{/if}
 		</div>
+		{#if locked}
+			<div class="flex flex-col items-center justify-center mt-8 md:mt-10">
+				<Button on:click={onNextQuestion} class="md:w-80 w-full h-12"
+					>Next Question
+					<ChevronRight className="h-4 w-4" />
+				</Button>
+			</div>
+		{/if}
 	</div>
 </main>
