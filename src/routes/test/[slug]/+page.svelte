@@ -39,11 +39,9 @@
 	<title>{data.slug} Test</title>
 </svelte:head>
 <main class="flex w-screen flex-col items-center overflow-y-auto">
-	<div class="hidden lg:block">
-		<ProgressBar />
-	</div>
+	<ProgressBar />
 	<h3 class="mt-10">Question {questionIndex + 1}/{$questionsStore.loaded.length}</h3>
-	<div class="flexflex-col mb-20 w-10/12 items-center lg:mt-10 lg:w-1/2">
+	<div class="flex flex-col mb-20 w-10/12 items-center lg:mt-10 lg:w-1/2">
 		<h1
 			class="mb-4 w-full scroll-m-20 text-center text-2xl font-bold tracking-tight md:mb-10 md:text-4xl lg:text-3xl"
 		>
@@ -56,8 +54,8 @@
 			{/each}
 		</div>
 		{#if locked}
-			<div class="flex flex-col items-center justify-center mt-8 md:mt-10">
-				<Button on:click={onNextQuestion} class="md:w-80 w-full h-12"
+			<div class="mt-8 flex flex-col items-center justify-center md:mt-10">
+				<Button on:click={onNextQuestion} class="h-12 w-full md:w-80"
 					>Next Question
 					<ChevronRight className="h-4 w-4" />
 				</Button>

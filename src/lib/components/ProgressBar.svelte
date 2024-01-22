@@ -1,11 +1,15 @@
 <script lang="ts">
-	import { questionsStore } from "../store";
+	import { questionsStore } from '../store';
+	import {Progress} from './ui/progress';
 
-  $: questionIndex = $questionsStore.loaded.findIndex(x => x == $questionsStore.currentQuestion);
+	$: questionIndex = $questionsStore.loaded.findIndex((x) => x == $questionsStore.currentQuestion);
 </script>
 
 <div class="flex w-screen justify-between">
-	<div class="auto-cols-20 grid w-full grid-flow-col gap-4 px-10 md:px-40 lg:px-80">
+	<div class="md:hidden">
+		<Progress max={100}   class="w-[60%]"  value={80} />
+	</div>
+	<div class="auto-cols-20 hidden w-full grid-flow-col gap-4 px-10 md:grid md:px-40 lg:px-80">
 		{#each $questionsStore.loaded as item, index}
 			{#if index >= questionIndex}
 				<div
