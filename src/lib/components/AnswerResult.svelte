@@ -16,7 +16,7 @@
 
 {#if question.type == 'code'}
 	<div
-		class="mockup-code bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:ring-0"
+		class="mockup-code py-3 text-sm bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:ring-0"
 	>
 		{#if !incorrect}
 			{#each blocks as block, i}

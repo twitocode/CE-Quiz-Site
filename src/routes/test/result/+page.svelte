@@ -79,12 +79,12 @@
       </h1>
       <div class="w-10/12 space-y-4 md:space-y-10 lg:w-1/2">
         {#each loaded as question}
-        {#if question.correct}
-        <div class="">
-          <span class="text-lg font-medium md:text-2xl">{question.question}</span>
-          <AnswerResult {question} incorrect={false} />
-        </div>
-        {/if}
+          {#if question.correct}
+          <div class={question.type == "code" ? "space-y-2" : ""}>
+            <span class="text-lg font-medium md:text-2xl">{question.question}</span>
+            <AnswerResult {question} incorrect={false} />
+          </div>
+          {/if}
         {/each}
       </div>
     {/if}
@@ -97,13 +97,13 @@
       <div class="w-10/12 space-y-8 divide-y-2 md:space-y-4 lg:w-1/2">
         {#each loaded as question}
           {#if !question.correct}
-            <div class="space-y-2 pt-8 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 lg:pt-2">
+            <div class="space-y-2 pt-8 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 lg:pt-8 lg:pb-4">
               <div class="flex h-full flex-col justify-center">
-                <span class="text-md font-bold md:text-2xl">{question.question}</span>
+                <span class="text-md font-bold md:text-2xl pb-2">{question.question}</span>
                 <AnswerResult {question} incorrect />
               </div>
-              <div class="flex h-full flex-col justify-center">
-                <span class="text-md font-medium mt-2 md:mt-0 md:text-2xl">Correct Answer</span>
+              <div class="flex h-full flex-col ">
+                <span class="text-md font-medium mt-2 md:mt-0 md:text-2xl pb-2">Correct Answer</span>
                 <AnswerResult {question} incorrect={false} />
               </div>
             </div>
