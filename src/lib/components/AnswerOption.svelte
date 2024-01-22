@@ -28,7 +28,7 @@
 {#if locked}
 	{#if question.type == 'code'}
 		<div
-			class="mockup-code min-h-16 md:min-h-40 text-sm py-3 bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 {$questionsStore.currentQuestion ==
+			class="mockup-code text-sm py-3 bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 {$questionsStore.currentQuestion ==
 			question
 				? 'ring-green-500'
 				: 'ring-red-500'}"
@@ -50,7 +50,7 @@
 {:else if question.type == 'code'}
 	<div
 		on:click={onClick}
-		class="mockup-code min-h-16 md:min-h-40 text-sm py-3 bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:ring-0"
+		class="mockup-code text-sm py-3 bg-white text-gray-700 shadow-lg ring-2 ring-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:ring-0"
 	>
 		{#each blocks as block, i}
 			<pre data-prefix={(i + 1).toString()}><code>{block}</code></pre>

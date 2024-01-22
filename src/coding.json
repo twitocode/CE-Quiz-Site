@@ -1,17 +1,17 @@
 [
 	{
 		"question": "Which of these is a proper use of pinMode()",
-		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT);\n\n\n    ",
+		"answer": "const int LED_PIN = 0;\npinMode(LED_PIN, OUTPUT);",
 		"type": "code"
 	},
 	{
 		"question": "Which of these represents an if statement",
-		"answer": "if (name == \"Mr. P\") {\n  Serial.println(\"I am the teacher\");\n}\n\n",
+		"answer": "if (name == \"Mr. P\") {\n  Serial.println(\"I am the teacher\");\n}",
 		"type": "code"
 	},
 	{
 		"question": "Which of these is a comment?",
-		"answer": "//if (name == \"Mr. P\") {\n//  Serial.println(\"//I am the teacher\");\n//}\n\n",
+		"answer": "//if (name == \"Mr. P\") {\n//  Serial.println(\"//I am the teacher\");\n//}",
 		"type": "code"
 	},
 	{
@@ -36,7 +36,7 @@
 	},
 	{
 		"question": "Which is a proper use of delay()",
-		"answer": "void loop() {\n  int milliseconds = 5000;\n  delay(milliseconds);\n}\n",
+		"answer": "void loop() {\n  int milliseconds = 5000;\n  delay(milliseconds);\n}",
 		"type": "code"
 	},
 	{
@@ -71,12 +71,12 @@
 	},
 	{
 		"question": "Which is a proper use of setup()",
-		"answer": "void setup() {\n  Serial.begin(9600);\n}\n\n",
+		"answer": "void setup() {\n  Serial.begin(9600);\n}",
 		"type": "code"
 	},
   {
     "question": "Which is NOT a proper loop() function?",
-    "answer": "loop {\n  delay(5000);\n}\n\n",
+    "answer": "loop {\n  delay(5000);\n}",
     "type": "code"
   }
 ]
